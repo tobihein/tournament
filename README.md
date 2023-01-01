@@ -1,1 +1,3 @@
-# tournament
+# About
+
+Application to manage tournaments
