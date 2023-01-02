@@ -1,1 +1,6 @@
-<p>teams works!</p>
+<h2>{{team.name | uppercase}} Details</h2>
+<div><span>id: </span>{{team.id}}</div>
+<div>
+  <label for="name">Teamname: </label>
+  <input id="name" [(ngModel)]="team.name" placeholder="name">
+</div>
