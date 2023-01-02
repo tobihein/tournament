@@ -1,6 +1,6 @@
-<h2>{{team.name | uppercase}} Details</h2>
-<div><span>id: </span>{{team.id}}</div>
+<h2>{{teams[0].name | uppercase}} Details</h2>
+<div><span>id: </span>{{teams[0].id}}</div>
 <div>
   <label for="name">Teamname: </label>
-  <input id="name" [(ngModel)]="team.name" placeholder="name">
+  <input id="name" [(ngModel)]="teams[0].name" placeholder="name">
 </div>
