@@ -14,11 +14,16 @@ export default class TeamsComponent implements OnInit{
   }
 
   teams: Team[] = []
+  selectedTeam?: Team;
   ngOnInit(): void {
     this.teamsService.getTeams().subscribe(
       response => {
         this.teams=response
       }
     )
+  }
+
+  onSelect(team: Team): void {
+    this.selectedTeam = team;
   }
 }

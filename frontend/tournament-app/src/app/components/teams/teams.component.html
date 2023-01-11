@@ -1,7 +1,13 @@
 <h2>Teams</h2>
-<ul>
-  <li *ngFor="let team of teams">
-      <span class="badge">{{team.id}}</span>
-      <span class="name">{{team.name}}</span>
-  </li>
-</ul>
+<div *ngFor="let team of teams">
+    {{team.id}}, {{team.name}} <button type="button" (click)="onSelect(team)">Details</button>
+</div>
+
+<div *ngIf="selectedTeam">
+  <h2>{{selectedTeam.name | uppercase}} Details</h2>
+  <div>id: {{selectedTeam.id}}</div>
+  <div>
+    <label>Team-Name: </label>
+    <input [(ngModel)]="selectedTeam.name" placeholder="name">
+  </div>
+</div>
