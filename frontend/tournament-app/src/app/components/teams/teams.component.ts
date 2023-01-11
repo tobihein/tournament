@@ -15,6 +15,10 @@ export default class TeamsComponent implements OnInit{
 
   teams: Team[] = []
   ngOnInit(): void {
-    this.teams = this.teamsService.getTeams()
+    this.teamsService.getTeams().subscribe(
+      response => {
+        this.teams=response
+      }
+    )
   }
 }

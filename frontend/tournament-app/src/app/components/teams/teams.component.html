@@ -1,6 +1,7 @@
-<h2>{{teams[0].name | uppercase}} Details</h2>
-<div><span>id: </span>{{teams[0].id}}</div>
-<div>
-  <label for="name">Teamname: </label>
-  <input id="name" [(ngModel)]="teams[0].name" placeholder="name">
-</div>
+<h2>Teams</h2>
+<ul>
+  <li *ngFor="let team of teams">
+      <span class="badge">{{team.id}}</span>
+      <span class="name">{{team.name}}</span>
+  </li>
+</ul>
