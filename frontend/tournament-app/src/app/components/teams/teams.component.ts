@@ -15,6 +15,7 @@ export default class TeamsComponent implements OnInit{
 
   teams: Team[] = []
   selectedTeam?: Team;
+  newTeam = {} as Team
   ngOnInit(): void {
     this.teamsService.getTeams().subscribe(
       response => {
@@ -25,5 +26,13 @@ export default class TeamsComponent implements OnInit{
 
   onSelect(team: Team): void {
     this.selectedTeam = team;
+  }
+
+  saveNewTeam(): void {
+    this.teamsService.safeNewTeam(this.newTeam).subscribe(
+      () => {
+        this.newTeam = {} as Team
+      }
+    )
   }
 }

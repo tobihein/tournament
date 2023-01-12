@@ -1,3 +1,4 @@
+import { Team } from './../../entities/team';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.css']
 })
-export class TeamComponent {
-
-}
+export class TeamComponent {}

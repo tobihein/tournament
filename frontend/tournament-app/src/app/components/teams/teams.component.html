@@ -1,3 +1,5 @@
+<h2>New Team</h2>
+<input id="name" [(ngModel)]="newTeam.name" placeholder="name"> <button type="button" (click)="saveNewTeam()">Speichern</button>
 <h2>Teams</h2>
 <div *ngFor="let team of teams">
     {{team.id}}, {{team.name}} <button type="button" (click)="onSelect(team)">Details</button>

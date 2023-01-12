@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Inject, Injectable, Component } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
@@ -16,5 +16,7 @@ export class TeamsService {
     return this.http.get<Team[]>('api/teams')
   }
 
-
+  safeNewTeam(team: Team): Observable<Team> {
+    return this.http.put<Team>('api/teams', team)
+  }
 }
